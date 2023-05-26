@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DizzyDroid's Daily Quote</title>
+    <!-- Including Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f5dc;
+            color: #333;
+            font-family: 'Times New Roman', serif;
+        }
+        #quote-container {
+            text-align: center;
+            max-width: 800px;
+            background: #fdf5e6;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+        }
+        #quote {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        #quote-content {
+            font-weight: bold;
+        }
+        #author {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        #favorite-label {
+            display: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .favorite {
+            color: #4f0000;
+        }
+        @media (max-width: 576px) {
+            #quote {
+                font-size: 1.5em;
+            }
+            #author {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="quote-container" class="shadow p-3 mb-5 bg-white rounded">
+        <p id="quote"><span id="quote-content">Loading...</span></p>
+        <p id="author"></p>
+        <p id="favorite-label">a dizzydroid favorite</p>
+    </div>
+
+    <!-- Including jQuery and Bootstrap JS for functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    const favorites = [
+        { content: "Despite everything, it's still you.", author: "" },
+        { content: "Be like the flower that gives its fragrance to even the hand that crushes it.", author: "" },
+        { content: "In the kingdom of glass everything is transparent, and there is no place to hide a dark heart.", author: "" },
+        { content: "The child is father of the man", author: "" },
+        { content: "Sometimes to stay alive, you gotta kill your mind.", author: "" },
+        { content: "Work hard in silence, let your success make the noise.", author: "" },
+        { content: "My thoughts are stars I cannot fathom into constellations.", author: "" }
+    ];
+
+    function getQuote() {
+        // Occasionally select from favorites
+        if (Math.random() < 0.4) {
+            const quote = favorites[Math.floor(Math.random() * favorites.length)];
+            document.getElementById('quote-content').innerHTML = `“<b>${quote.content}</b>”`;
+            document.getElementById('author').innerText = quote.author;
+            document.getElementById('quote-content').classList.add("favorite");
+            document.getElementById('favorite-label').style.display = "block";
+        } else {
+            fetch('https://api.quotable.io/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('quote-content').innerHTML = `“<b>${data.content}</b>”`;
+                document.getElementById('author').innerText = data.author;
+                document.getElementById('quote-content').classList.remove("favorite");
+                document.getElementById('favorite-label').style.display = "none";
+            });
+        }
+    }
+
+    getQuote();
+    </script>
+</body>
+</html>
