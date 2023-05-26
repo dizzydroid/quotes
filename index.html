@@ -6,52 +6,8 @@
     <title>DizzyDroid's Daily Quote</title>
     <!-- Including Bootstrap CSS for styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f5f5dc;
-            color: #333;
-            font-family: 'Times New Roman', serif;
-        }
-        #quote-container {
-            text-align: center;
-            max-width: 800px;
-            background: #fdf5e6;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-        }
-        #quote {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        #quote-content {
-            font-weight: bold;
-        }
-        #author {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        #favorite-label {
-            display: none;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .favorite {
-            color: #4f0000;
-        }
-        @media (max-width: 576px) {
-            #quote {
-                font-size: 1.5em;
-            }
-            #author {
-                font-size: 1em;
-            }
-        }
-    </style>
+    <!-- Including custom CSS for styling -->
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <div id="quote-container" class="shadow p-3 mb-5 bg-white rounded">
@@ -76,7 +32,7 @@
 
     function getQuote() {
         // Occasionally select from favorites
-        if (Math.random() < 0.4) {
+        if (Math.random() < 0.3) {
             const quote = favorites[Math.floor(Math.random() * favorites.length)];
             document.getElementById('quote-content').innerHTML = `“<b>${quote.content}</b>”`;
             document.getElementById('author').innerText = quote.author;
