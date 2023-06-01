@@ -9,7 +9,12 @@
     <!-- Including custom CSS for styling -->
     <link href="styles.css" rel="stylesheet">
 </head>
-<body>
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <div class="logo-container">
+        <img id="logo" src="https://i.ibb.co/s9QrBLX/quotespng.png" alt="Logo">
+        <button id="toggle-theme">🌙</button>
+    </div>
+    
     <div id="quote-container" class="shadow p-3 mb-5 bg-white rounded">
         <p id="quote"><span id="quote-content">Loading...</span></p>
         <p id="author"></p>
@@ -51,6 +56,20 @@
     }
 
     getQuote();
+
+    // Add the theme toggle script here
+    document.getElementById('toggle-theme').addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+
+    if (document.body.classList.contains('dark-theme')) {
+        this.innerHTML = "☀️";
+        document.getElementById('logo').src = "https://i.ibb.co/k0DDCS4/quotesdarkpng.png";
+    } else {
+        this.innerHTML = "🌙";
+        document.getElementById('logo').src = "https://i.ibb.co/s9QrBLX/quotespng.png";
+    }
+});
+
     </script>
 </body>
 </html>

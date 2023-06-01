@@ -42,3 +42,58 @@ body {
         font-size: 1em;
     }
 }
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#logo {
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+}
+
+body.dark-theme {
+    background: #333;
+    color: #f5f5dc;
+}
+
+body.dark-theme #quote-container {
+    background: #555;
+    color: #f5f5dc;
+}
+
+body.dark-theme .favorite {
+    color: #4f4f9d;
+}
+
+#toggle-theme {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;  /* make the button oval-shaped */
+    cursor: pointer;
+    font-family: sans-serif; 
+    font-size: 1.2em;  /* adjust to fit the emoji size */
+    width: 50px;  /* adjust to fit the emoji size */
+    height: 50px;  /* adjust to fit the emoji size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggle-theme:hover {
+    background: #555;
+}
+
+
+body.dark-theme #quote-container {
+    background-color: #333  !important;
+    color: #f5f5dc  !important;
+}
+
+
+body.dark-theme .favorite {
+    color: #ffaeae; /* or any other color suitable for dark mode */
+}
