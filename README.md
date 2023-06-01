@@ -6,7 +6,4 @@ It takes too long loading the site on the **first** visit, it's mainly becuase o
 <pre align = "center"> <b> 
 <a href="https://dizzydroid.github.io/quotes/">Find your next favorite Quote!</a> </b>
 </pre>
-<<<<<<< HEAD
 
-=======
->>>>>>> cf711b02f49c6fa52b29a24a408b243707f519b0

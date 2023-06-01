@@ -64,8 +64,25 @@
     if (document.body.classList.contains('dark-theme')) {
         this.innerHTML = "☀️";
         document.getElementById('logo').src = "https://i.ibb.co/k0DDCS4/quotesdarkpng.png";
+        localStorage.setItem('theme', 'dark');  // save dark theme preference
     } else {
         this.innerHTML = "🌙";
+        document.getElementById('logo').src = "https://i.ibb.co/s9QrBLX/quotespng.png";
+        localStorage.setItem('theme', 'light'); // save light theme preference
+    }
+});
+
+// When the page loads, check for a saved theme preference and apply it
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        document.getElementById('toggle-theme').innerHTML = "☀️";
+        document.getElementById('logo').src = "https://i.ibb.co/k0DDCS4/quotesdarkpng.png";
+    } else {
+        document.body.classList.remove('dark-theme');
+        document.getElementById('toggle-theme').innerHTML = "🌙";
         document.getElementById('logo').src = "https://i.ibb.co/s9QrBLX/quotespng.png";
     }
 });
