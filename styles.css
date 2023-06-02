@@ -54,7 +54,7 @@ body {
 }
 
 body.dark-theme {
-    background: #3d3b3b;
+    background: #2d3133;
     color: #f5f5dc;
 }
 
@@ -68,7 +68,7 @@ body.dark-theme .favorite {
 }
 
 #toggle-theme {
-    background: #333;
+    background: #2d3133;
     color: #fff;
     border: none;
     padding: 10px 20px;
