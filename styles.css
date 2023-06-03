@@ -97,3 +97,36 @@ body.dark-theme #quote-container {
 body.dark-theme .favorite {
     color: #ffaeae; /* or any other color suitable for dark mode */
 }
+
+#new-quote {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+    border-radius: 50%;  
+    width: 60px;  
+    height: 60px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-quote:focus {
+    outline: none;
+    box-shadow: 0 0 10px #007bff; /* This will give a subtle blue glow when focused */
+}
+
+
+#new-quote:hover {
+    color: #007bff;
+}
+
+body.dark-theme #new-quote {
+    color: white;
+}
+
+body.dark-theme #new-quote:hover {
+    color: #007bff;
+}

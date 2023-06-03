@@ -8,6 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Including custom CSS for styling -->
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body style="display: flex; flex-direction: column; align-items: center;">
     <div class="logo-container">
@@ -20,6 +21,11 @@
         <p id="author"></p>
         <p id="favorite-label">a dizzydroid favorite</p>
     </div>
+
+
+<button id="new-quote" class="btn btn-light">
+    <span class="material-icons">autorenew</span>
+</button>
 
     <!-- Including jQuery and Bootstrap JS for functionality -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -86,6 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('logo').src = "https://i.ibb.co/s9QrBLX/quotespng.png";
     }
 });
+
+document.getElementById('new-quote').addEventListener('click', getQuote);
+
 
     </script>
 </body>
