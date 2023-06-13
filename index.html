@@ -43,6 +43,8 @@
     ];
 
     function getQuote() {
+        // Add the spinner class to the refresh button
+        document.getElementById('new-quote').classList.add('spinner');
         // Occasionally select from favorites
         if (Math.random() < 0.3) {
             const quote = favorites[Math.floor(Math.random() * favorites.length)];
@@ -50,6 +52,8 @@
             document.getElementById('author').innerText = quote.author;
             document.getElementById('quote-content').classList.add("favorite");
             document.getElementById('favorite-label').style.display = "block";
+        // Remove the spinner class from the refresh button
+        document.getElementById('new-quote').classList.remove('spinner');
         } else {
             fetch('https://api.quotable.io/random')
             .then(response => response.json())
@@ -58,6 +62,8 @@
                 document.getElementById('author').innerText = data.author;
                 document.getElementById('quote-content').classList.remove("favorite");
                 document.getElementById('favorite-label').style.display = "none";
+            // Remove the spinner class from the refresh button
+            document.getElementById('new-quote').classList.remove('spinner');
             });
         }
     }
