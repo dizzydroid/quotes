@@ -10,7 +10,8 @@ const favorites = [
         { content: "Sometimes to stay alive, you gotta kill your mind.", author: "" },
         { content: "Work hard in silence, let your success make the noise.", author: "" },
         { content: "My thoughts are stars I cannot fathom into constellations.", author: "" },
-        { content: "Common sense is not so common.", author: "" }
+        { content: "Common sense is not so common.", author: "" },
+        { content: "A sense of humor is just common sense dancing.", author: "" }
     ];
 
     function getQuote() {
