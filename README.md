@@ -1,5 +1,9 @@
 # “𝐐𝐮𝐨𝐭𝐞𝐬”
 
+<div id="header" align="left">
+ <img src="imgs/quotesgithub-min.png">
+</div>
+
 <pre align = "center"> <b> 
 <a href="https://dizzydroid.github.io/quotes/">Find your next favorite Quote!</a> </b>
 </pre>
