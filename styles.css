@@ -144,3 +144,32 @@ body.dark-theme #new-quote:hover {
 .spinner {
     animation: rotate 1s linear infinite;
 }
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#github-link {
+    position: absolute;
+    top: 10px;       /* Adjust the distance from the top as needed */
+    right: 18px;     /* Adjust the distance from the right as needed */
+    font-size: 2em;
+    color: #2d2d2d;
+    transition: color 0.3s ease;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+
+#github-link:hover {
+    color: #153456; /* Change to desired hover color */
+}
+
+body.dark-theme #github-link {
+    color: white;
+}
+
+body.dark-theme #github-link:hover {
+    color: #6cb3ff; /* Adjust if needed for dark mode hover */
+}
