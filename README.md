@@ -12,9 +12,8 @@ A simple website that generates a random quote using the [Quotable API](https://
 
 ______________________________________
 ### Known issues:
-- **API fetching issue**: The API doesn't seem to be working properly, I'm currently looking into it. 
+- ~~API fetching issue: The API doesn't seem to be working properly, I'm currently looking into it.~~
 - ~~It takes too long loading the site on the **first** visit, it's mainly becuase of how the API is fetched. I intend on fixing that soon!~~
-- ~~If the frequency of "dizzydroid favorite" quotes is somewhat high, it's due to the API fetching and is likely a one-time issue as well.~~
 - If the "Loading..." screen takes some time, it's likely a one-time server side issue and is usually on first visits only.
 - [Report any issues you encounter!](https://github.com/dizzydroid/quotes/issues)
 ___________________________________________________________
